@@ -1,0 +1,390 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/*
+header {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+*/
+
+.header {
+    background: #000;
+    color: white;
+    padding: 4px 8px !important;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+@media (max-width: 400px) {
+    .logo {
+        width: 70px;
+    }
+}
+
+
+.tagline {
+    color: #ffcc00;
+}
+
+.contact-top {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+nav {
+    background: #ffcc00;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.hero {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gray {
+    background: #f9f9f9;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #ffcc00;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 30px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 22px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+@media(max-width: 600px) {
+    .slider {
+        height: 280px;
+    }
+    .slide-text {
+        font-size: 16px;
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+
+/* New Header Design */
+
+/* ONE LINE HEADER */
+.header {
+    background: #000;
+    padding: 6px 12px;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+/* Company name + tagline */
+.company-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.company-text h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #ffcc00;
+}
+
+/* Phone */
+.header-phone {
+    font-size: 13px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .header-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-phone {
+        width: 100%;
+        margin-top: 4px;
+        font-size: 12px;
+    }
+}
+
+/* whatsapp added */
+
+/* Header contact row */
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* WhatsApp icon in header */
+.whatsapp-header img {
+    width: 26px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.whatsapp-header img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .header-contact {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    .whatsapp-header img {
+        width: 24px;
+    }
+}
+
+
+/* Header base */
+.header {
+    background: #000;
+    padding: 6px 12px;
+}
+
+/* One-line layout */
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+}
+
+/* Company text */
+.company-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.company-text h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #ffcc00;
+}
+
+/* Contact + icons */
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.header-contact img {
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.header-contact img:hover {
+    transform: scale(1.15);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-contact {
+        width: 100%;
+        justify-content: center;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+}
