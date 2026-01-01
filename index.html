@@ -7,83 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- WhatsApp Button -->
-<a href="https://wa.me/919493279898" class="whatsapp" target="_blank">
+<a href="https://wa.me/919672119898" class="whatsapp" target="_blank">
     💬
 </a>
 
-<!-- <script>
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-
-function showSlide(n) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[n].classList.add("active");
-}
-
-function changeSlide(n) {
-    index += n;
-    if (index >= slides.length) index = 0;
-    if (index < 0) index = slides.length - 1;
-    showSlide(index);
-}
-
-// Auto slide every 4 seconds
-setInterval(() => {
-    changeSlide(1);
-}, 4000);
-
-showSlide(index);  -->
-</script>
 
 
 <body>
-
-<!-- HEADER -->
- <!--
-<header>
-    <div class="container">
-        <h1>Shiv Shakti Construction</h1>
-        <p class="tagline">Quality Construction • Trusted Service</p>
-        <div class="contact-top">
-            📞 9493279898 | 9493309898 | 9493549898 | 9493739898
-        </div>
-    </div>
-</header>
--->
-<!--
-<header class="header">
-    <div class="header-content">
-        <img src="images/logo.jpg" alt="Shiv Shakti Construction Logo" class="logo">
-        <div>
-            <h1>Shiv Shakti Construction</h1>
-            <p class="tagline">Quality Construction • Trusted Service</p>
-            <div class="contact-top">
-                📞 9493279898 | 9493309898 | 9493549898 | 9493739898
-            </div>
-        </div>
-    </div>
-</header>
--->
 
 <header class="header">
     <div class="header-row">
 
         <!-- Logo -->
         <img src="images/logo.jpg" alt="Shiv Shakti Construction Logo" class="logo">
-
+        
         <!-- Company Text -->
         <div class="company-text">
             <h1>Shiv Shakti Construction</h1>
             <span class="tagline">Quality Construction • Trusted Service</span>
         </div>
 
+        <!-- Audio 
+        <div class="header-right">
+            <button id="audioBtn" class="audio-btn">🔊 Play</button> 
+            <button onclick="toggleAudio()" id="audioBtn" class="audio-btn">
+            🔊 Play Music
+        </button>
+        </div>
+        Button -->
         <!-- Phone + Social Icons -->
         <div class="header-contact">
             <span class="phone">
                 📞 9493279898 | 9493309898 | 9493549898 | 9493739898
             </span>
 
-            <a href="https://wa.me/919493279898" target="_blank">
+            <a href="https://wa.me/919672119898" target="_blank">
                 <img src="images/whatsapp.png" alt="WhatsApp">
             </a>
 
@@ -104,14 +62,39 @@ showSlide(index);  -->
 
 
 
-<!-- NAVBAR -->
+<!-- NAVBAR 
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#professional">Professional</a>
     <a href="#contact">Contact</a>
+    <button onclick="toggleAudio()" id="audioBtn" class="audio-btn">
+            🔊 Play Music
+    </button>
+    <audio id="sliderAudio">
+    <source src="audio/shivaudio.mp3" type="audio/mpeg">
+    </audio>
+
 </nav>
+-->
+
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#professional">Professional</a>
+    <a href="#contact">Contact</a>
+
+    <!-- Play Music button AFTER Contact -->
+    <button onclick="toggleAudio()" id="audioBtn" class="audio-btn">
+        🔊 Play Music
+    </button>
+</nav>
+
+<audio id="sliderAudio">
+    <source src="audio/shivaudio.mp3" type="audio/mpeg">
+</audio>
 
 <!-- HOME -->
 <!-- HOME IMAGE SLIDER -->
@@ -156,6 +139,16 @@ showSlide(index);  -->
     <span class="next" onclick="changeSlide(1)">❯</span>
 
 </div>
+<!--Audio Added
+<audio id="sliderAudio">
+    <source src="audio/shivaudio.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleAudio()" id="audioBtn" class="audio-btn">
+🔊 Play Music
+</button>
+-->
+
 
 
 <!-- ABOUT -->
@@ -294,6 +287,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<script>
+let isPlaying = false;
+const audio = document.getElementById("sliderAudio");
+const btn = document.getElementById("audioBtn");
+
+function toggleAudio() {
+    if (!isPlaying) {
+        audio.play();
+        btn.innerHTML = "⏸ Stop Music";
+        isPlaying = true;
+    } else {
+        audio.pause();
+        audio.currentTime = 0; // reset audio
+        btn.innerHTML = "🔊 Play Music";
+        isPlaying = false;
+    }
+}
+</script>
+
 
 
 </body>
